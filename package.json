@@ -1,0 +1,28 @@
+{
+  "name": "greetingcats",
+  "version": "0.0.1",
+  "description": "virtual reality greeting cards... with cats!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuckeyeHackers/greetingcats.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuckeyeHackers/greetingcats/issues"
+  },
+  "homepage": "https://github.com/BuckeyeHackers/greetingcats#readme",
+  "devDependencies": {
+    "budo": "^7.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.3"
+  }
+}
