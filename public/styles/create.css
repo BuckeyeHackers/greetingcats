@@ -1,6 +1,10 @@
-body{background: url("../assets/img/create-background.png");}
+body{
+  background: url("../assets/img/create-background.png");
+  font-family: 'Montserrat', sans-serif;
+}
 
 textarea{
+  font-family: inherit;
   font-size: 30pt;
   border: none;
   word-wrap: break-word;
@@ -14,7 +18,14 @@ textarea{
 }
 .container{display: flex;height: 95vh;align-items: center;}
 
-.side{width: 20%;height: 700px;margin: auto;}
+.side{
+  width: 20%;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction:column;
+  text-align:center;
+  }
 
 .center{
     width: 40%;
@@ -25,7 +36,6 @@ textarea{
 .templates{
     list-style: none;
     font-size: 24pt;
-    width: 50%;
     height: 100%;
     padding: 0;
     margin: auto;
@@ -74,4 +84,53 @@ h2{
   text-align: center;
   margin-top: .5em;
   border-bottom: black 1px solid;
+
+}
+
+.Shadows{
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.Poppins{
+  font-family: 'Poppins', sans-serif;
+}
+
+.Montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bub{
+  background: url("../assets/img/bub.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.collage{
+  background: url("../assets/img/collage.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.three{
+  background: url("../assets/img/three.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.grumpy{
+  background: url("../assets/img/grumpy.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.snow{
+  background: url("../assets/img/snow.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sorry{
+  background: url("../assets/img/sorry.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
