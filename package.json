@@ -4,7 +4,7 @@
   "description": "virtual reality greeting cards... with cats!",
   "main": "index.js",
   "scripts": {
-    "start": "budo --live --verbose --port 3000 --open"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "budo": "^7.0.0"
   },
   "dependencies": {
+    "ejs": "^2.5.2",
     "express": "^4.14.0"
   }
 }
