@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
-    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello, World! - A-Frame</title>
+	<meta name="description" content="Hello, World! - A-Frame">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
+	<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../styles/create.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="side">
-      <h2>Font</h2>
-      <ul class="templates fonts">
-		  <li>Shadows</li>
-		  <li>Poppins</li>
-		  <li class="selected">Montserrat</li> /* SWAP THIS FONT */
-		  /* ADD ANOTHER FONT */
-		</ul>
-		<a href="index.html">Home</a> /* REDESIGN THIS */
-      </div> 
-      <div class="center">
-        <div class="card">
-        	<div class="image snow">
-				<div class="text">
-					<textarea class="Montserrat"> Your text here!</textarea>
-				</div>
-        	</div>
+</head>
+
+<body>
+	<div class="container">
+		<div class="side">
+			<h2>Font</h2>
+			<ul class="templates fonts">
+				<li>Shadows</li>
+				<li>Poppins</li>
+				<li class="selected">Montserrat</li>
+
+			</ul>
+			<a href="index.html">Home</a>
 		</div>
-      </div>
-      <div class="side">
-        <h2>Image</h2>
-		<ul class="templates">
-		  <li>bub</li>
-		  <li class="selected">snow</li>
-		  <li>collage</li>
-		  <li>three</li>
-		  <li>grumpy</li>
-		  <li>sorry</li>
-		</ul>
-		<a href="index.html">Share</a> /* CHANGE THIS LINK */ /*REDESIGN THIS */
-      </div>	  
-    </div>
-  </body>
+		<div  class="center">
+			<div id="userCard" class="card">
+				<div class="image snow">
+					<div class="text">
+						<textarea id="cardText" class="Montserrat"> Your text here!</textarea>
+					</div>
+				</div>
+			</div>
+			<div>
+			</div>
+			<button id="createVRButton">Makes Your Card Come To Life!</button>
+
+		</div>
+		<div class="side">
+			<h2>Image</h2>
+			<ul class="templates">
+				<li>bub</li>
+				<li class="selected">snow</li>
+				<li>collage</li>
+				<li>three</li>
+				<li>grumpy</li>
+				<li>sorry</li>
+			</ul>
+			<a href="index.html">Share</a> /* CHANGE THIS LINK */ /*REDESIGN THIS */
+		</div>
+	</div>
+</body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="../scripts/create.js"></script>
+
 </html>

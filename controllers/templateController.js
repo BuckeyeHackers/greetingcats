@@ -12,7 +12,9 @@ exports.cardByID = function(req, res, next, id){
                 message: 'No card with that identifier has been found'
             })
         }
+        console.log(card);
         req.card = card;
+        req.card.cardDiv = card.cardDiv;
         next();
     })
 }
@@ -20,7 +22,7 @@ exports.cardByID = function(req, res, next, id){
 exports.createCard = function(req, res){
     var cardId = createCardID();
     var userCard = new Card({
-        cardText: "Hello World",
+        cardDiv: req.body.cardDiv,
         templatePath: "/templates/birthdayTemplate.ejs",
         cardId: cardId
     });
@@ -32,6 +34,7 @@ exports.createCard = function(req, res){
             console.log("Card Added!");
         }
     })
+    res.send(cardId);
 
 }
 
