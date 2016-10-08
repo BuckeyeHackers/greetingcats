@@ -20,7 +20,7 @@ app.get('/card/img360/list', function(req, res){
 
 });
 
-var port = 9000;
+var port = 80;
 app.listen(port);
 console.log('Listening on port', port);
  
