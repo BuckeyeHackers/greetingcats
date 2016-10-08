@@ -1,23 +1,25 @@
 {
-  "name": "aframe-hello-world-boilerplate",
-  "description": "Boilerplate with A-Frame's 'Hello, World!' of WebVR.",
-  "version": "0.3.0",
-  "license": "MIT",
+  "name": "greetingcats",
+  "version": "0.0.1",
+  "description": "virtual reality greeting cards... with cats!",
+  "main": "index.js",
   "scripts": {
-    "start": "budo --live --verbose --port 3000 --open",
-    "deploy": "ghpages",
-    "ghpages": "ghpages"
+    "start": "budo --live --verbose --port 3000 --open"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuckeyeHackers/greetingcats.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuckeyeHackers/greetingcats/issues"
+  },
+  "homepage": "https://github.com/BuckeyeHackers/greetingcats#readme",
   "devDependencies": {
-    "budo": "^7.0.0",
-    "ghpages": "0.0.3"
+    "budo": "^7.0.0"
   },
-  "keywords": [
-    "aframe",
-    "aframe-example",
-    "aframe-boilerplate",
-    "aframe-scene",
-    "webvr",
-    "vr"
-  ]
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
