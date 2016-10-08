@@ -77,14 +77,16 @@ li{
   background-size: cover;
 }
 
-.selected{border: black 1px solid;}
+.selected{
+  border: black 1px solid;
+  box-shadow: 3px 3px 6px #888;
+}
 
 h2{
   font-size: 50pt;
   text-align: center;
   margin-top: .5em;
   border-bottom: black 1px solid;
-
 }
 
 .Shadows{
@@ -95,8 +97,12 @@ h2{
   font-family: 'Poppins', sans-serif;
 }
 
-.Montserrat{
-  font-family: 'Montserrat', sans-serif;
+.Satisfy{
+   font-family: 'Satisfy', cursive;
+}
+
+.Bree{
+  font-family: 'Bree Serif', serif;
 }
 
 .bub{
@@ -133,4 +139,23 @@ h2{
   background: url("../assets/img/sorry.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.home{
+  margin-right: auto; 
+}
+
+a{
+  border: black 1px solid;
+    width: 25%;
+    font-size: 20pt;
+    background-color: RGBA(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: grey;
+    padding: 0.25em;
+    box-shadow: 3px 3px 10px #888;
+}
+
+.share{
+  margin-left: auto;
 }
