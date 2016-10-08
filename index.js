@@ -9,6 +9,7 @@ var dataBaseURL = "WOAHCANTSHOWTHAT"
 mongoose.connect('mongodb://admin:lollipop@ds053186.mlab.com:53186/greetingcats')
 
 var app = express();
+app.engine('html', require('ejs').renderFile);
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/usercard'));
@@ -28,9 +29,10 @@ app.post('/card/create', cardController.createCard);
 
 app.get('/:cardId', function(req, res){
     var cardData = {
-        cardText: req.card.cardText,
+        cardDiv: req.card.cardDiv,
         cardSoundURL: req.card.cardSoundURL
     }
+    console.log(cardData);
     res.render(__dirname + req.card.templatePath, cardData); 
 
 });

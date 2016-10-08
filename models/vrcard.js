@@ -6,7 +6,7 @@ var cardSchema = new Schema({
         type: String,
         default: ''
     },
-    cardText: {
+    cardDiv: {
         type: String,
         default: ''
     },
