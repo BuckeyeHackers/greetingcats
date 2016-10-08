@@ -4,7 +4,7 @@
   "description": "virtual reality greeting cards... with cats!",
   "main": "index.js",
   "scripts": {
-    "test": "testplz"
+    "start": "budo --live --verbose --port 3000 --open"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
     "url": "https://github.com/BuckeyeHackers/greetingcats/issues"
   },
   "homepage": "https://github.com/BuckeyeHackers/greetingcats#readme",
+  "devDependencies": {
+    "budo": "^7.0.0"
+  },
   "dependencies": {
     "express": "^4.14.0"
   }
