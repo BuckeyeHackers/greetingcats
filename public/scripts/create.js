@@ -32,6 +32,7 @@ $('#createVRButton').click(function (){
           var a = $('#share-link');
           a.text(link);
           a.attr('href', link);
+          $('#qrCode').html("");
           new QRCode(document.getElementById("qrCode"), "http://greetingcats.tech/" + xhr.responseText);
         } else {
         }
@@ -42,15 +43,6 @@ $('#createVRButton').click(function (){
 
 
 })
-
-link = function(url){
-  var anchor = document.createElement("a");
-  anchor.setAttribute('id', 'share-link');
-  anchor.innerHTML = 'http://greetingcats.tech/' + url;
-  anchor.setAttribute('href', 'http://greetingcats.tech/' + url);
-  anchor.setAttribute('target', '_blank');
-  return anchor;
-}
 
 $('.ribbon').click( function(){
   $('.flip-container')[0].classList.toggle("flip")
