@@ -8,7 +8,7 @@ $('li').click( function (){
         $('textarea')[0].setAttribute('class', this.innerHTML);
     }
     else{
-        $('.image')[0].setAttribute('class', 'image ' + this.innerHTML);
+        $('.card')[0].setAttribute('class', 'card ' + this.innerHTML);
     }
 })
 
@@ -20,14 +20,15 @@ $('#createVRButton').click(function (){
     var cardText = document.getElementById("cardText");
     cardText.innerHTML = $("#cardText").val();
 
-    console.log(cardText.value);
+    //console.log(cardText.value);
 
     messageJSON.cardDiv = userCard.innerHTML;
 
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(xhr.responseText)
+            $('#dialog').append(link(xhr.responseText));
+            $('#dialog').dialog();
         } else {
         }
     }
@@ -37,3 +38,11 @@ $('#createVRButton').click(function (){
 
 
 })
+
+link = function(url){
+  var anchor = document.createElement("a");
+  anchor.innerHTML = 'http://greetingcats.tech/' + url;
+  anchor.setAttribute('href', 'http://greetingcats.tech/' + url);
+  anchor.setAttribute('target', '_blank');
+  return anchor;
+}
