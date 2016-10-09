@@ -44,11 +44,12 @@ exports.createCard = function(req, res){
 
 
 function createCardID(){
-    var funWords = ['Meow', 'Cat', 'Fish', 'Paws', 'Tails', 'Kitty', 'Chicken',
-    'Cute', 'Cuddly', 'Furry', 'Love', 'Kitten', 'Ferocious', 'Floof', 'Fuzzy'];
+    var funWords = ['Meow', 'Cat', 'Fish', 'Paws', 'Tail',
+    'Cute', 'Fur', 'Love', 'Claw', 'Lion', 'Puma', 'Mice', 'Joy', 'Yarn', 
+    'Paw', 'Leap', 'Milk', 'Barn', 'Cool', 'Fat', 'Bird', 'Jump', 'Play', 'Hunt'];
 
     var cardID = "";
-    for(var i = 0; i < 6; i++){
+    for(var i = 0; i < 3; i++){
         cardID = cardID + funWords[Math.floor(Math.random() * funWords.length)]
     }
     console.log(cardID);
