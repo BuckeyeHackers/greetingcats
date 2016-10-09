@@ -19,14 +19,17 @@ $('#createVRButton').click(function (){
     var cardText = document.getElementById("cardText");
     cardText.innerHTML = $("#cardText").val();
 
-    //console.log(cardText.value);
+    console.log(cardText.value);
 
     messageJSON.cardDiv = userCard.innerHTML;
+    console.log(messageJSON);
+
 
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             $('#dialog a').replaceWith(link(xhr.responseText));
+            new QRCode(document.getElementById("qrCode"), "http://greetingcats.tech/" + xhr.responseText);
             $('#dialog').dialog();
         } else {
         }
