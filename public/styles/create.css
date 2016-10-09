@@ -31,7 +31,8 @@ textarea{
     width: 40%;
 }
 
-.text{height: 500px;width: 500px;margin: auto;border: white 2px solid;filter: drop-shadow(0 0 2px);}
+.text{height: 500px;width: 500px;margin: auto;border: white 2px solid;text-shadow: 0 0 5px #000;;
+}
 
 .templates{
     list-style: none;
@@ -77,16 +78,14 @@ li{
   background-size: cover;
 }
 
-.selected{
-  border: black 1px solid;
-  box-shadow: 3px 3px 6px #888;
-}
+.selected{border: black 1px solid;}
 
 h2{
   font-size: 50pt;
   text-align: center;
   margin-top: .5em;
   border-bottom: black 1px solid;
+
 }
 
 .Shadows{
@@ -97,12 +96,8 @@ h2{
   font-family: 'Poppins', sans-serif;
 }
 
-.Satisfy{
-   font-family: 'Satisfy', cursive;
-}
-
-.Bree{
-  font-family: 'Bree Serif', serif;
+.Montserrat{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .bub{
@@ -139,23 +134,4 @@ h2{
   background: url("../assets/img/sorry.jpg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.home{
-  margin-right: auto; 
-}
-
-a{
-  border: black 1px solid;
-    width: 25%;
-    font-size: 20pt;
-    background-color: RGBA(255, 255, 255, 0.5);
-    text-decoration: none;
-    color: grey;
-    padding: 0.25em;
-    box-shadow: 3px 3px 10px #888;
-}
-
-.share{
-  margin-left: auto;
 }

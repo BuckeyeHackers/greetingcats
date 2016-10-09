@@ -22,6 +22,7 @@ textarea{
   background: none;
   text-align: center;
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   resize: none;
 }
 .container{display: flex;height: 95vh;align-items: center;}
