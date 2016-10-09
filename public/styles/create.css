@@ -47,6 +47,12 @@ textarea{
     min-height:700px;
 }
 
+#share-link{
+	font-size: 16pt;
+	display:block;
+	margin:auto;
+}
+
 .text{
   height: 500px;
   width: 500px;
@@ -69,8 +75,15 @@ textarea{
     height: 700px;
     width: 700px;
     margin: auto;
+    background:#FFF;
+    flex-direction:column;
 }
 
+#qrCode{
+	display:block;
+	margin:auto;
+	max-width:700px;
+}
 li{
   cursor: pointer;
 }
@@ -100,10 +113,13 @@ h2{
   font-family: 'Poppins', sans-serif;
 }
 
-.Montserrat{
-  font-family: 'Montserrat', sans-serif;
+.Bree{
+  font-family: 'Bree';
 }
 
+.Satisfy{
+  font-family: 'Satisfy';
+}
 .bub{
   background: url("../assets/img/bub.jpg");
   background-repeat: no-repeat;
