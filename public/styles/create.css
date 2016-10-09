@@ -62,16 +62,14 @@ li{
   background:RGBA(255,255,255,.5);
 }
 
-.selected{
-  border: black 1px solid;
-  box-shadow: 3px 3px 6px #888;
-}
+.selected{border: black 1px solid;}
 
 h2{
   font-size: 50pt;
   text-align: center;
   margin-top: .5em;
   border-bottom: black 1px solid;
+
 }
 
 .Shadows{
@@ -82,12 +80,8 @@ h2{
   font-family: 'Poppins', sans-serif;
 }
 
-.Satisfy{
-   font-family: 'Satisfy', cursive;
-}
-
-.Bree{
-  font-family: 'Bree Serif', serif;
+.Montserrat{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .bub{

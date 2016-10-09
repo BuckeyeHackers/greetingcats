@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var Card = mongoose.model('Card');
 var conn = mongoose.connection;
+var qr = require('qr-image');  
+var fs = require('fs');
 
 exports.cardByID = function(req, res, next, id){
 
@@ -34,6 +36,7 @@ exports.createCard = function(req, res){
             console.log("Card Added!");
         }
     })
+
     res.send(cardId);
 
 }

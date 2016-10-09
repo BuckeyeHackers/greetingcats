@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif|PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+		<script src="../scripts/qrcode.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../styles/create.css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
@@ -24,10 +25,10 @@
 		</ul>
 		<a href="index.html" class="link home">Home</a> 
       </div> 
-      <div class="center">
-        	<div id="userCard"class="card snow">
+      <div id="userCard" class="center">
+        	<div  class="card snow">
         		<div class="frost">
-				<div class="text">
+							<div class="text">
 					<textarea id="cardText" class="Montserrat"> Your text here!</textarea>
 				</div>
 			</div>
@@ -49,6 +50,7 @@
 
   </body>
       <div id="dialog" title="View or Share!">
+			<div id="qrCode"></div>
 	</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
