@@ -37,10 +37,6 @@ exports.createCard = function(req, res){
         }
     })
 
-    var code = qr.image("http://greetingcats.tech/" + cardId, { type: 'jpeg'});
-    var output = fs.createWriteStream('qrCodeBabe.jpeg');
-    code.pipe(output);
-
     res.send(cardId);
 
 }
