@@ -31,11 +31,18 @@
       <img id="bg" src="/assets/img360/bg.jpg">
       <a-asset-item id="myModelObj" src="/models/chr_cat_black.obj"></a-asset-item>
       <a-asset-item id="myModelMtl" src="/models/chr_cat_black.mtl"></a-asset-item>
+      <a-asset-item id="memecatObj" src="/models/char_memeCat_white.obj"></a-asset-item>
+      <a-asset-item id="memecatObjWhite" src="/models/char_memeCat_white2.obj"></a-asset-item>
+      <a-asset-item id="memecatGrey" src="/models/char_memeCat_white2.mtl"></a-asset-item>
+      <a-asset-item id="memecatWhite" src="/models/char_memeCat_white.mtl"></a-asset-item>
 
     </a-assets>
-    <a-sky src="#bg"></a-sky>
+    <a-sky color="#4CC3D9" material="color:#ECECEC;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20" scale="-1 1 1"></a-sky>
+    <a-plane rotation="-90 0 0" width="100" height="100" color="#7BC8A4" material="color:#7BC8A4" geometry="primitive:plane;width:4;height:4"></a-plane>
     <a-entity position="0 3.9 -12.44" scale="1 1 1" geometry="primitive: box; depth:1;width:8;height:8" material="shader:html;target:#userCardDiv;transparent:false;fps:1;side:front; ;"></a-entity>
-    <a-entity scale="0.125 0.125 0.125" obj-model="obj: #myModelObj; mtl: #myModelMtl"></a-entity>
+    <a-entity scale="1.5 1.5 1.5" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="0 0 15.13" rotation="0 180 0" material=""></a-entity>
+    <a-entity scale="0.25 0.25 0.25" obj-model="obj:#memecatObj;mtl:#memecatGrey" position="10.09 3.9 -9.8" rotation="0 90 0" material=""></a-entity>
+<a-entity scale="0.25 0.25 0.25" obj-model="obj:#memecatObjWhite;mtl:#memecatWhite" position="-10 3.9 -10.04" rotation="0 270 0" material=""></a-entity>
   </a-scene>
 
 </body>
