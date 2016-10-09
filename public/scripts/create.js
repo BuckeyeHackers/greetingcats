@@ -13,7 +13,6 @@ $('li').click( function (){
 })
 
 $('#createVRButton').click(function (){
-    console.log("Clicky click!");
     var userCard = document.getElementById("userCard");
     var xhr = new XMLHttpRequest();
     var messageJSON = {};
@@ -27,7 +26,7 @@ $('#createVRButton').click(function (){
 
     xhr.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            $('#dialog').append(link(xhr.responseText));
+            $('#dialog a').replaceWith(link(xhr.responseText));
             $('#dialog').dialog();
         } else {
         }
@@ -41,8 +40,15 @@ $('#createVRButton').click(function (){
 
 link = function(url){
   var anchor = document.createElement("a");
-  anchor.innerHTML = 'http://greetingcats.tech/' + url;
+  anchor.innerHTML = 'Share me!';
   anchor.setAttribute('href', 'http://greetingcats.tech/' + url);
   anchor.setAttribute('target', '_blank');
   return anchor;
 }
+
+$('.ribbon').click( function(){
+  $('.flip-container')[0].classList.toggle("flip")
+})
+$('.ribbon-left').click( function(){
+  $('.flip-container')[0].classList.toggle("flip")
+})

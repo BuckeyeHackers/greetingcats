@@ -1,8 +1,18 @@
 body{
   background: url("../assets/img/create-background.png");
   font-family: 'Montserrat', sans-serif;
+  display:flex;
+  flex-direction:column;
 }
 
+.logo{
+  font-family: 'Satisfy', cursive;
+  text-align:center;
+  font-size:50pt;
+  margin:0;
+  margin-top:.5em;
+  display:inline;
+}
 textarea{
   font-size: 30pt;
   border: none;
@@ -14,12 +24,16 @@ textarea{
   text-align: center;
   resize: none;
 }
-.container{display: flex;height: 95vh;align-items: center;}
+.container{
+  display: flex;
+  align-items: flex-start;
+}
 
 .side{
-  width: 20%;
-  height: 700px;
+  width:15%;
   margin: auto;
+  margin-top:0;
+  height:80%;
   display: flex;
   flex-direction:column;
   text-align:center;
@@ -27,21 +41,27 @@ textarea{
 
 .center{
     width: 40%;
+    margin:auto;
+    margin-top:2em;
+    min-width:700px;
+    min-height:700px;
 }
 
-.text{height: 500px;width: 500px;margin: auto;border: black 2px solid;}
+.text{
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  border: black 2px solid;
+}
 
 .templates{
     list-style: none;
     font-size: 24pt;
-    height: 100%;
     padding: 0;
     margin: auto;
     text-align: center;
     line-height: 2;
 }
-
-.left{width:50%;display: flex;align-items: center;text-align: center;}
 
 .card{
     display:flex;
@@ -69,8 +89,8 @@ li{
 
 h2{
   font-size: 50pt;
+  margin-top:0;
   text-align: center;
-  margin-top: .5em;
   border-bottom: black 1px solid;
 }
 
@@ -127,20 +147,192 @@ h2{
 }
 
 .home{
-  margin-right: auto; 
+  margin: auto; 
 }
 
 .link{
-  border: black 1px solid;
-    width: 25%;
+    border: black 1px solid;
     font-size: 20pt;
     background-color: RGBA(255, 255, 255, 0.5);
     text-decoration: none;
     color: grey;
-    padding: 0.25em;
+    padding: 0.5em;
+    cursor:pointer;
+}
+
+.link:hover{
     box-shadow: 3px 3px 10px #888;
 }
 
 .share{
-  margin-left: auto;
+  margin: auto;
+}
+
+.plain-link{
+  text-decoration:none;
+  color:black;
+  font-size:inherit;
+}
+@media screen and (max-width: 1200px) { 
+  .side{
+    display: none;
+  }
+  .center{
+  }
+}
+
+
+
+/*** flipper ***/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+	width: 700px;
+	height: 700px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+/*** Media Queries ***/
+@media screen and (max-width: 700px) { 
+  .flip-container, .front, .back {
+	width: 350px;
+	height: 350px;
+  }
+  .card{
+    width:350px;
+    height:350px;
+  }
+  
+  .center{
+    width:350px;
+    height:350px;
+    min-width:350px;
+  }
+
+  .text{
+    width:250px;
+    height:250px;
+  }
+}
+
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 150px; height: 150px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 200px;
+  display: block;
+  background: RGB(254,192,133);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 38px; right: -42px;
+  cursor:pointer;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon-left {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 150px; height: 150px;
+  text-align: right;
+}
+.ribbon-left span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 200px;
+  display: block;
+  background: RGB(254,192,133);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 38px; left: -42px;
+  cursor:pointer;
+}
+.ribbon-left span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #FFE169;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #FFE169;
+}
+.ribbon-left span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #FFE169;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #FFE169;
 }
