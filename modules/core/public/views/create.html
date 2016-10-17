@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>New Card - GreetingCats</title>
+        <meta name="description" content="GreetingCats">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif|PT+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
+        <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+        <script src="/core/js/qrcode.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/core/styles/create.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+        <h1 class="logo">
+            <a class="plain-link" href="/">GreetingCats</a>
+        </h1>
+        <div class="container">
+            <div class="side">
+                <h2>Font</h2>
+                <ul class="templates fonts">
+                    <li>Shadows</li>
+                    <li class="selected">Poppins</li>
+                    <li>Satisfy</li>
+                    <li>Bree</li>
+                </ul>
+            </div>
+            <div class="center">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <div id="createVRButton" class="ribbon">
+                                <span>SHARE</span>
+                            </div>
+														<div id="userCard">
+                            <div class="card snow">
+                                <div class="frost">
+                                    <div class="text">
+                                        <textarea id="cardText" class="Poppins">Your text here!</textarea>
+                                    </div>
+                                </div>
+                            </div>
+														</div>
+                        </div>
+                        <div class="back">
+                            <div class="ribbon-left">
+                                <span>Back</span>
+                            </div>
+                            <div class="card">
+                                <div id="qrCode"></div>
+                                <a id="share-link" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side">
+                <h2>Image</h2>
+                <ul class="templates">
+                    <li>bub</li>
+                    <li class="selected">snow</li>
+                    <li>collage</li>
+                    <li>three</li>
+                    <li>grumpy</li>
+                    <li>sorry</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="/core/js/create.js"></script>
+</html>

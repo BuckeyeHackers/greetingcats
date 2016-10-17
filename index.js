@@ -3,6 +3,7 @@ var fs = require('fs');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var cardModule = require("./modules/card");
+var coreModule = require("./modules/core");
 
 mongoose.connect('mongodb://admin:lollipop@ds053186.mlab.com:53186/greetingcats')
 
@@ -13,16 +14,15 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/usercard'));
 app.use(bodyParser.json());
 
+coreModule(app);
 cardModule(app);
 
-
+/*
 app.get('/', function (req, res){ 
     res.sendFile(__dirname + "/public/views/index.html");
 });
+*/
 
-app.get('/test', function (req, res){
-    res.render(__dirname + "/usercard/mytestcard/index.html");
-});
 
 
 

@@ -13,9 +13,10 @@
   <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
   <script src="https://rawgit.com/mayognaise/aframe-html-shader/master/dist/aframe-html-shader.min.js"></script>
-  <script src="scripts/virtualReality.js"></script>
+  <script src="js/virtualReality.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="../styles/vrTemplate.css">
+  <link rel="stylesheet" type="text/css" href="styles/vrTemplate.css">
+  <!-- Hey Friend! -->
 
 </head>
 
@@ -27,17 +28,15 @@
 
   <a-scene id="vrScene">
     <a-assets>
-
-      <img id="bg" src="/assets/img360/bg.jpg">
-      <a-asset-item id="myModelObj" src="/models/chr_cat_black.obj"></a-asset-item>
-      <a-asset-item id="myModelMtl" src="/models/chr_cat_black.mtl"></a-asset-item>
-      <a-asset-item id="memecatObj" src="/models/char_memeCat_white.obj"></a-asset-item>
-      <a-asset-item id="memecatObjWhite" src="/models/char_memeCat_white2.obj"></a-asset-item>
-      <a-asset-item id="memecatGrey" src="/models/char_memeCat_white2.mtl"></a-asset-item>
-      <a-asset-item id="memecatWhite" src="/models/char_memeCat_white.mtl"></a-asset-item>
-      <a-asset-item id="environmentObj" src="/models/enviro.obj"></a-asset-item>
-      <a-asset-item id="environmentMtl" src="/models/enviro.mtl"></a-asset-item>
-      <a-asset-item id="environmentPly" src="/models/enviro.ply"></a-asset-item>
+      <a-asset-item id="myModelObj" src="models/chr_cat_black.obj"></a-asset-item>
+      <a-asset-item id="myModelMtl" src="models/chr_cat_black.mtl"></a-asset-item>
+      <a-asset-item id="memecatObj" src="models/char_memeCat_white.obj"></a-asset-item>
+      <a-asset-item id="memecatObjWhite" src="models/char_memeCat_white2.obj"></a-asset-item>
+      <a-asset-item id="memecatGrey" src="models/char_memeCat_white2.mtl"></a-asset-item>
+      <a-asset-item id="memecatWhite" src="models/char_memeCat_white.mtl"></a-asset-item>
+      <a-asset-item id="environmentObj" src="models/enviro.obj"></a-asset-item>
+      <a-asset-item id="environmentMtl" src="models/enviro.mtl"></a-asset-item>
+      <a-asset-item id="environmentPly" src="models/enviro.ply"></a-asset-item>
 
     </a-assets>
     <a-sky color="#001848" material="color:#ECECEC;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"

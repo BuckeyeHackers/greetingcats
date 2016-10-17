@@ -9,7 +9,7 @@ exports.init = function (app) {
             cardDiv: req.card.cardDiv,
             cardSoundURL: req.card.cardSoundURL
         }
-        console.log(cardData);
+        console.log("Card Rendered!");
         res.render(app.cards.dirname + "/public/views/genericTemplate.ejs", cardData);
 
     });
