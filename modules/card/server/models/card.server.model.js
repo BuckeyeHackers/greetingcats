@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+
 var cardSchema = new Schema({
     templatePath: {
         type: String,
@@ -18,7 +19,7 @@ var cardSchema = new Schema({
         type: String
     }
 
-    
+
 });
 
 mongoose.model('Card', cardSchema);
