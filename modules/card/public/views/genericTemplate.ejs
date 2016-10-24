@@ -2,58 +2,107 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Greetings from Cats!</title>
-  <meta name="description" content="Hello, World! - A-Frame">
-  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif|PT+Serif" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Greetings from Cats!</title>
+	<meta name="description" content="Hello, World! - A-Frame">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif|PT+Serif" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins|Shadows+Into+Light+Two" rel="stylesheet">
 
-  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://rawgit.com/mayognaise/aframe-html-shader/master/dist/aframe-html-shader.min.js"></script>
-  <script src="js/virtualReality.js"></script>
+	<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+	<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+	<script src="https://rawgit.com/mayognaise/aframe-html-shader/master/dist/aframe-html-shader.min.js"></script>
+	<!-- <script src="js/virtualReality.js"></script> -->
 
-  <link rel="stylesheet" type="text/css" href="styles/vrTemplate.css">
-  <!-- Hey Friend! -->
+	<!--<link rel="stylesheet" type="text/css" href="styles/vrTemplate.css"> -->
+	<!-- Hey Friend! -->
 
 </head>
 
 <body>
-
+	<!--
   <div id="userCardDiv" class="hidden">
     <%- cardDiv %>
   </div>
+  -->
 
-  <a-scene id="vrScene">
-    <a-assets>
-      <a-asset-item id="myModelObj" src="models/chr_cat_black.obj"></a-asset-item>
-      <a-asset-item id="myModelMtl" src="models/chr_cat_black.mtl"></a-asset-item>
-      <a-asset-item id="memecatObj" src="models/char_memeCat_white.obj"></a-asset-item>
-      <a-asset-item id="memecatObjWhite" src="models/char_memeCat_white2.obj"></a-asset-item>
-      <a-asset-item id="memecatGrey" src="models/char_memeCat_white2.mtl"></a-asset-item>
-      <a-asset-item id="memecatWhite" src="models/char_memeCat_white.mtl"></a-asset-item>
-      <a-asset-item id="environmentObj" src="models/enviro.obj"></a-asset-item>
-      <a-asset-item id="environmentMtl" src="models/enviro.mtl"></a-asset-item>
-      <a-asset-item id="environmentPly" src="models/enviro.ply"></a-asset-item>
+	<a-scene id="vrScene">
+		<a-assets>
+			<a-asset-item id="myModelObj" src="models/chr_cat_black.obj"></a-asset-item>
+			<a-asset-item id="myModelMtl" src="models/chr_cat_black.mtl"></a-asset-item>
+			<a-asset-item id="memecatObj" src="models/char_memeCat_white.obj"></a-asset-item>
+			<a-asset-item id="memecatObjWhite" src="models/char_memeCat_white2.obj"></a-asset-item>
+			<a-asset-item id="memecatGrey" src="models/char_memeCat_white2.mtl"></a-asset-item>
+			<a-asset-item id="memecatWhite" src="models/char_memeCat_white.mtl"></a-asset-item>
+			<a-asset-item id="environmentObj" src="models/enviro.obj"></a-asset-item>
+			<a-asset-item id="environmentMtl" src="models/enviro.mtl"></a-asset-item>
+			<a-asset-item id="environmentPly" src="models/enviro.ply"></a-asset-item>
+			<img id="cardFront" src='<%=cardFrontURL%>'>
+			<img id="cardInterior" src='<%=cardInteriorURL%>'>
+			
+		</a-assets>
+		<a-entity id="user.camera" camera="userHeight: 1.6" look-controls>
+			<a-entity id="user.reticle">
+				<a-entity raycaster="objects: .clickable" cursor="fuse: true; fuseTimeout: 1000;" visible="false" scale="0.01 0.01 0.01" position="0 0 -1" geometry="primitive: ring" material="color: black; shader: flat">
+	
+					<a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="forwards" from="0.001 0.001 0.001" to="0.01 0.01 0.01"
+						dur="1000"></a-animation>
 
-    </a-assets>
-    <a-sky color="#001848" material="color:#ECECEC;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"
-      scale="-1 1 1"></a-sky>
-    <a-plane rotation="-90 0 0" width="100" height="100" color="#604878" material="color:#7BC8A4" geometry="primitive:plane;width:4;height:4"></a-plane>
-    <a-entity position="0 3.9 -12.44" scale="1 1 1" geometry="primitive: box; depth:1;width:8;height:8" material="shader:html;target:#userCardDiv;transparent:false;fps:1;side:front; ;"></a-entity>
+						<a-animation begin="cursor-fusing" easing="ease-in" attribute="visible" from="false" to="true"
+						dur="1000"></a-animation>
+
+					<a-animation begin="click" easing="ease-in" attribute="visible" from="true" to="false"
+						dur="1000"></a-animation>
+				</a-entity>
+
+				</a-ring>
+
+			</a-entity>
+		</a-entity>
+
+
+
+		<a-sky color="#001848" material="color:#ECECEC;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"
+			scale="-1 1 1"></a-sky>
+		
+		<a-plane rotation="-90 0 0" width="100" height="100" color="#604878" material="color:#7BC8A4" geometry="primitive:plane;width:4;height:4"></a-plane>
+		<a-entity id="card" position="4 3.9 12.44" rotation = "0 180 0">
+			<a-entity class="not-clickable" position="4 0 -0.01" scale="1 1 1" material="src:#cardInterior" geometry="primitive: box; depth:0.001;width:8;height:8"></a-entity>
+
+			<a-entity id="pivotPoint" position="0 0 0">
+
+				<a-entity id="cardFront" class="clickable" material="side:front; shader:flat; src:#cardFront" position="4 0 0" cursor-listener scale="1 1 1" geometry="primitive: box; depth:0.001;width:8;height:8" >
+					<a-entity id="cardFrontBack" class="clickable" material="color:white;" position="0 0 -0.05" cursor-listener scale="1 1 1" geometry="primitive: box; depth:0.001;width:8;height:8" >
+
+				</a-entity>
+
+				</a-entity>
+
+
+				<a-animation begin="click" attribute="rotation" from="0 0 0" to="0 -180 0" dur="2000" fill="both"></a-animation>
+
+
+			</a-entity>
+		</a-entity>
+
+		<!--
     <a-entity scale="0.25 0.25 0.25" obj-model="obj:#memecatObj;mtl:#memecatGrey" position="10.09 3.9 -9.8" rotation="0 90 0"
       material=""></a-entity>
     <a-entity scale="0.25 0.25 0.25" obj-model="obj:#memecatObjWhite;mtl:#memecatWhite" position="-10 3.9 -10.04" rotation="0 270 0"
       material=""></a-entity>
-  <a-entity rotation="-90 0 0" ply-model="src:#environmentPly" material="" position="0 0 0" scale="1.75 1.75 1.75"></a-entity>  
-  <a-entity scale="0.3 0.3 0.3" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="-9.74 17.54 -14.61" rotation="0 0 0" material="" visible="true"></a-entity>
-  <a-entity scale="0.25 0.25 0.25" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="21.96 26.15 25.55" rotation="0 180 0" material="" visible="true"></a-entity>
-  <a-entity scale="0.25 0.25 0.25" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="-3.89 3.53 15.77" rotation="0 180 0" material=""></a-entity>
+    <a-entity rotation="-90 0 0" ply-model="src:#environmentPly" material="" position="0 0 0" scale="1.75 1.75 1.75"></a-entity>
+    <a-entity scale="0.3 0.3 0.3" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="-9.74 17.54 -14.61" rotation="0 0 0"
+      material="" visible="true"></a-entity>
+    <a-entity scale="0.25 0.25 0.25" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="21.96 26.15 25.55" rotation="0 180 0"
+      material="" visible="true"></a-entity>
+    <a-entity scale="0.25 0.25 0.25" obj-model="obj:#myModelObj;mtl:#myModelMtl" position="-3.89 3.53 15.77" rotation="0 180 0"
+      material=""></a-entity>
+      -->
 
-  
-  </a-scene>
+
+
+	</a-scene>
 
 </body>
 

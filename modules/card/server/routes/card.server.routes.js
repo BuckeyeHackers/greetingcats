@@ -7,7 +7,9 @@ exports.init = function (app) {
     app.get('/card/:cardId', function (req, res) {
         var cardData = {
             cardDiv: req.card.cardDiv,
-            cardSoundURL: req.card.cardSoundURL
+            cardSoundURL: req.card.cardSoundURL,
+            cardFrontURL: req.card.cardFrontURL,
+            cardInteriorURL: req.card.cardInteriorURL
         }
         console.log("Card Rendered!");
         res.render(app.cards.dirname + "/public/views/genericTemplate.ejs", cardData);

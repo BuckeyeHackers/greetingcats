@@ -17,6 +17,14 @@ var cardSchema = new Schema({
     },
     cardId: {
         type: String
+    },
+    cardFront: {
+        type: String,
+        default: ''
+    },
+    cardInterior: {
+        type: String,
+        default: ''
     }
 
 
